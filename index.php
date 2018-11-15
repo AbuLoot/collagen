@@ -1,10 +1,12 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en-US">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
   <link rel="shortcut icon" href="images/favicon.png"/>
-  <title> 100% Говяжий Протеин</title>
+  <title>100% Говяжий Протеин</title>
+  <meta name="description" content="Протеин полученный из натурального говяжьего белка, для набора мыщечной массы, для укрепления суставов и связок.">
 
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
@@ -27,23 +29,23 @@
   <![endif]-->
 </head>
 <body>
-  <div class="noo-spinner">
+  <!-- <div class="noo-spinner">
     <div class="spinner">
       <div class="cube1"></div>
       <div class="cube2"></div>
     </div>
-  </div>
+  </div> -->
 
   <div class="site">
     <main id="main">
-      <header class="bg-header pt-4">
+      <header class="bg-header pt-3">
         <div class="section">
           <div class="container">
             <div class="row">
               <div class="col-sm-4">
                 <div class="branding__logo">
                   <a href="/">
-                    <img src="images/collagen/logo.png" alt="SapaLife Collagen»" class="main-logo">
+                    <img src="images/collagen/logo.png" alt="Biotic Collagen»" class="main-logo">
                   </a>
                   <h3 class="heading small fz-24 white"> Натуральный продукт</h3>
                 </div>
@@ -61,7 +63,7 @@
                 <h3 class="heading primary-color text-uppercase header-title"> 100% Говяжий Протеин</h3>
                 <div class="row">
                   <div class="col-sm-10">
-                    <p class="primary-color- white fz-28 lh-28">Протеин полученный из натурального говяжьего белка, для набора мыщечной массы, для укрепления суставов и связок.</p>
+                    <p class="primary-color- white fz-28 lh-28 ls-1">Протеин полученный из натурального говяжьего белка, для набора мыщечной массы, для укрепления суставов и связок.</p>
                   </div>
                 </div>
                 <h3 class="heading primary-color header-price fz-60 "> 9500〒</h3>
@@ -74,6 +76,21 @@
           </div>
         </div>
       </header>
+
+      <?php if (isset($_SESSION['notifications'])) : ?>
+        <div class="alert alert-danger">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <?php foreach ($_SESSION['notifications'] as $key => $notifications) : ?>
+            <ul>
+              <?php foreach ($notifications as $notification) : ?>
+                <li><?= $key . ' - ' . $notification ?></li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+
+      <?php unset($_SESSION['notifications']); ?>
 
       <!-- OUR PRODUCTS -->
       <section class="section pt-8 pb-8">
@@ -93,12 +110,10 @@
                   </a>
                   <div class="actions">
                     <div class="action action-view-detail">
-                      <a href="shop-detail.html">
-                        <i class="icon-magnifier"></i>
-                      </a>
+
                     </div>
                     <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart">Заказать</a>
+                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -118,12 +133,10 @@
                   </a>
                   <div class="actions">
                     <div class="action action-view-detail">
-                      <a href="shop-detail.html">
-                        <i class="icon-magnifier"></i>
-                      </a>
+
                     </div>
                     <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart">Заказать</a>
+                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -143,12 +156,10 @@
                   </a>
                   <div class="actions">
                     <div class="action action-view-detail">
-                      <a href="shop-detail.html">
-                        <i class="icon-magnifier"></i>
-                      </a>
+
                     </div>
                     <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart">Заказать</a>
+                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -168,12 +179,10 @@
                   </a>
                   <div class="actions">
                     <div class="action action-view-detail">
-                      <a href="shop-detail.html">
-                        <i class="icon-magnifier"></i>
-                      </a>
+
                     </div>
                     <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart">Заказать</a>
+                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -299,37 +308,41 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Svidetelstvo-sport-pit.jpg">
-                <img class="img-responsive" src="images/sertificates/Svidetelstvo-sport-pit-mini.jpg">
-              </a>
-            </div>
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Svidetelstvo-sport-pit-1.jpg">
-                <img class="img-responsive" src="images/sertificates/Svidetelstvo-sport-pit-1-mini.jpg"><br><br>
-              </a>
-            </div>
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Декларация-о-соответствии-товара.jpg">
-                <img class="img-responsive" src="images/sertificates/Декларация-о-соответствии-товара-mini.jpg"><br>
-              </a>
-            </div>
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Сертификат-качества.jpg">
-                <img class="img-responsive" src="images/sertificates/Сертификат-качества-mini.jpg">
-              </a>
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Сертификат-Халал.jpg">
-                <img class="img-responsive" src="images/sertificates/Сертификат-Халал-mini.jpg">
-              </a>
-            </div>
-            <div class="col-6 col-sm-3">
-              <a target="_blank" href="images/sertificates/Сертификат-Халал-на-Анг.яз.-2017.jpg">
-                <img class="img-responsive" src="images/sertificates/Сертификат-Халал-на-Анг.яз.-2017-mini.jpg">
-              </a>
+            <div class="col-lg-9 mx-auto">
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Svidetelstvo-sport-pit.jpg">
+                    <img class="img-responsive" src="images/sertificates/Svidetelstvo-sport-pit-mini.jpg">
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Svidetelstvo-sport-pit-1.jpg">
+                    <img class="img-responsive" src="images/sertificates/Svidetelstvo-sport-pit-1-mini.jpg"><br><br>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Декларация-о-соответствии-товара.jpg">
+                    <img class="img-responsive" src="images/sertificates/Декларация-о-соответствии-товара-mini.jpg"><br>
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Сертификат-качества.jpg">
+                    <img class="img-responsive" src="images/sertificates/Сертификат-качества-mini.jpg">
+                  </a><br>
+                </div>
+                <!-- </div>
+                <div class="row"> -->
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Сертификат-Халал.jpg">
+                    <img class="img-responsive" src="images/sertificates/Сертификат-Халал-mini.jpg">
+                  </a>
+                </div>
+                <div class="col-6 col-sm-4">
+                  <a target="_blank" href="images/sertificates/Сертификат-Халал-на-Анг.яз.-2017.jpg">
+                    <img class="img-responsive" src="images/sertificates/Сертификат-Халал-на-Анг.яз.-2017-mini.jpg">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -354,9 +367,9 @@
               </ul>
             </div>
             <div class="col-sm-12 col-lg-4">
-              <img class="d-block mt-4 mx-auto" src="images/collagen/banka2.png" alt="">
+              <img class="d-block mt-10 mx-auto" src="images/collagen/banka2.png" alt="">
               <div class="text-center">
-                <a href="#" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать сейчас</a>
+                <a href="#" class="btn-app btn-app-p mt-2" data-toggle="modal" data-target="#appModal">Заказать</a>
               </div>
           </div>
         </div>
@@ -367,13 +380,13 @@
         <div class="container">
           <div class="row pt-8 pb-8">
             <div class="order-xs-2 col-sm-12 col-lg-6">
-              <img class="d-block  mt-2 mx-auto" src="images/collagen/banka2.png" alt="">
+              <img class="d-block mt-5 mx-auto" src="images/collagen/banka2.png" alt="">
               <div class="text-center">
-                <a href="#" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать сейчас</a>
+                <a href="#" class="btn-app btn-app-p mt-2" data-toggle="modal" data-target="#appModal">Заказать</a>
               </div>
             </div>
-            <div class="col-sm-12 offset-6- col-lg-6">
-              <h2 class="text-uppercase- fz-52 primary-color">Преимущества нашего продукта</h2>
+            <div class="col-sm-12 col-lg-6">
+              <h2 class="fz-52 primary-color">Преимущества нашего продукта</h2>
               <ul class="list-benefist">
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> 100% натуральный, без ГМО</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Витамины A, B12, D, C</li>
@@ -406,9 +419,9 @@
                 <li class="nav-item mb-2">
                   <img src="images/standarts/haccp2.png" class="img-responsive">
                 </li>
-                <li class="nav-item mb-2">
+                <!-- <li class="nav-item mb-2">
                   <img src="images/standarts/kap2.png" class="img-responsive">
-                </li>
+                </li> -->
                 <li class="nav-item mb-2">
                   <img src="images/standarts/gmo2.png" class="img-responsive">
                 </li>
@@ -472,7 +485,7 @@
       </section>
 
       <!-- WHY IS IT PROFITABLE TO BUY FROM US? -->
-      <section class="section bg-night pt-8 pb-8">
+      <section class="section bg-black pt-8 pb-8">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-lg-12">
@@ -540,47 +553,40 @@
               <h3 class="heading fw-normal fz-40 mb-8"> Часто задаваемые вопросы</h3>
               <div id="accordion" class="accordion">
                 <div class="accordion-section">
-                  <div class="accordion-header active" id="headingOne">
+                  <div class="accordion-header" id="headingOne">
                     <h6 class="accordion-title">
-                      <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Оригинал?</div>
+                      <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Продолжительность курса приема</div>
                       <span class="accordion-icon"></span>
                     </h6>
                   </div>
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="accordion-content">Да. Мы являемся официальным дилером, берем на заводе.</div>
+                    <div class="accordion-content">Продолжительность курса составляет не менее 3 месяцев.
+                    Кожа. Ногти. Волосы. Ожоги. Восстановление после операций. Продолжительность курса должна быть такова, чтобы клетки этих тканей успели смениться новыми.
+                    Хрящевая ткань одна из самых медленно возобновляемых. Это объясняется тем, что хрящи не имеют прямого капиллярного питания из кровотока. Хрящи получают питательные вещества только посредством осмоса и диффузии при омовения его синовиальной жидкостью. Омовения происходит при движении сустава, поэтому для нормальной регенерации хрящей и восстановление всего сустава обязательно нужна умеренная физическая активность.
+                    Если вы принимаете коллаген вместе с препаратами глюкозамина / хондроитина, в приеме последних необходимо делать перерыв после каждых 2-3 месяцев, но в приеме коллагена перерыва делать не рекомендуется.
+
+                    Более эффективным будет более длительный курс приема только коллагена, чем более короткий курс приема коллагена вместе с препаратами хондроитина и глюкозамина.
+
+                    Длительность курса приема коллагена бывает от трех месяцев до нескольких лет, а в тяжелых случаях и всю жизнь, курсами. Восстановление хрящевых тканей, к сожалению, требует долгого времени.</div>
                   </div>
                 </div>
                 <div class="accordion-section">
                   <div class="accordion-header" id="headingTwo">
                     <h6 class="accordion-title">
-                      <div class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Как вы можете это подтвердить?</div>
+                      <div class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Рекомендации по питанию</div>
                       <span class="accordion-icon"></span>
                     </h6>
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="accordion-content">Если придете в наш офис можем показать наш дилерский контракт. Или можете связаться непосредственно с заводом по контактам указанным на упаковке, Вам подтвердят что мы являемся единственным дилером в Казахстане.</div>
-                  </div>
-                </div>
-                <div class="accordion-section">
-                  <div class="accordion-header" id="headingThree">
-                    <h6 class="accordion-title">
-                      <div class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Это натуральный продукт?</div>
-                      <span class="accordion-icon"></span>
-                    </h6>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="accordion-content">Да, это букет из 16-и различных трав настоянных на меде.</div>
-                  </div>
-                </div>
-                <div class="accordion-section">
-                  <div class="accordion-header" id="headingFour">
-                    <h6 class="accordion-title">
-                      <div class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Как его нужно употреблять?</div>
-                      <span class="accordion-icon"></span>
-                    </h6>
-                  </div>
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="accordion-content">Употреблять 2 раза в день, утром и вечером по пол чайной ложки. Перед каждым употреблением нужно размешать содержимое банки.</div>
+                    <div class="accordion-content">Оптимальная дозировка по коллагена составляет примерно 0,2 г / кг тела / сутки. Рассчитывается как 25- 30% от общего количества употребляемого человеком в сутки белка. Которая, в свою очередь составляет 0.8-1.5 г / кг тела / сут.
+
+                    А для спортсменов, людей, занимающихся физическим трудом или используют диеты для уменьшения жировой прослойки, количество употребляемого с пищей белка несколько выше: 1.5-2 г / кг тела / сут.
+
+                    Если организм не будет получать необходимое ему количество аминокислот в виде употребляемого с пищей белка, и еще хуже, когда это происходит хронически, то употребляемый коллаген может быть использован организмом не для восстановления ваших проблемных мест — суставов или кожи, а на выполнение более важных для организма процессов, для которых ощущается нехватка именно этих необходимых элементов.
+
+                    Поэтому, полноценное питание — сверхважная составляющая процесса питания и восстановления коллагеновых тканей организма.
+
+                    Кроме белка, нужно стараться обеспечить в рационе питания достаточное количество витаминов, ( в особенности, витамина С), минералов (в особенности. железа), Омега-3 и пить достаточно жидкости.</div>
                   </div>
                 </div>
               </div>
@@ -602,7 +608,7 @@
                           <input type="tel" name="phone" placeholder="Введите номер телефона*" minlength="5" maxlength="20" value="" required>
                         </div>
                         <div class="col-md-12">
-                          <button type="submit" class="button style-flat button-primary fullwidth mt-3">Отправить</button>
+                          <button type="submit" class="btn-app mt-3">Отправить</button>
                         </div>
                       </div>
                     </form>
@@ -639,7 +645,7 @@
                       <input type="tel" name="phone" placeholder="Введите номер телефона*" minlength="5" maxlength="20" value="" required>
                     </div>
                     <div class="col-md-12">
-                      <button type="submit" class="button style-flat button-primary fullwidth mt-3">Отправить</button>
+                      <button type="submit" class="btn-app mt-3">Отправить</button>
                     </div>
                   </div>
                 </form>
@@ -654,14 +660,29 @@
       </div>
     </div>
 
-    <footer class="footer bg-night">
+    <!-- MODAL MESSAGE -->
+    <div class="modal fade" id="message-status" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Статус заявки</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p class="alert <?=$_SESSION['status']?>"><?=$_SESSION['message']?></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-black">
       <div class="footer-inner">
         <div class="container">
           <div class="row">
             <div class="col-sm-4 col-lg-7 col-md-6">
               <div class="branding__logo">
                 <a href="./">
-                  <img src="images/collagen/logo.png" alt="SapaLife" class="main-logo" />
+                  <img src="images/collagen/logo.png" alt="Biotic" class="main-logo" />
                 </a>
               </div>
               <div class="mb-4"></div>
@@ -681,11 +702,11 @@
       <!-- MAP -->
       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6bc3a0def06bc151d0400c33880107fc3aa3eb68f19082c16b09583225a7ada1&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=false"></script>
 
-      <div class="copyright-2 bg-night">
+      <div class="copyright-2 bg-black">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <p class="mb-0"> Сайт зарезервирован компанией SapaLife</p>
+              <p class="mb-0"> Сайт зарезервирован компанией Biotic</p>
             </div>
             <div class="col-sm-6">
               <div class="text-right text-center-sm">
@@ -716,8 +737,7 @@
   <!-- LOAD JQUERY LIBRARY -->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate.min.js"></script>
-  <!-- <script src="js/bootstrap.min.js"></script> -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/modernizr-2.7.1.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
@@ -728,6 +748,10 @@
   <script src="js/jQuery.headroom.js"></script>
   <script src="js/script.js"></script>
 
+  <?php if (isset($_SESSION['status'])) : ?>
+    <script> $('#message-status').modal('show'); </script>
+    <?php unset($_SESSION['status']); unset($_SESSION['message']); ?>
+  <?php endif; ?>
 
   <!-- <script src="/js/jquery.themepunch.tools.min.js"></script>
   <script src="/js/jquery.themepunch.revolution.min.js"></script>
