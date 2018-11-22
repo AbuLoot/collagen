@@ -439,7 +439,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-8 offset-sm-2">
-                <h3 class="text-uppercase text-center fz-50- mb-5 white primary-color">Отзывы</h3>
+                <h2 class="text-uppercase text-center fz-50- mb-5 white primary-color">Отзывы</h2>
               </div>
               <div class="col-sm-12">
                 <div class="testimonials-slider" data-auto-play="true" data-desktop="1" data-laptop="1" data-tablet="1" data-mobile="1">
@@ -486,7 +486,7 @@
           <div class="row">
             <div class="col-sm-12 col-lg-12">
               <div class="mt-3"></div>
-              <h3 class="text-uppercase white fz-50- text-center"> Почему выгодно покупать у нас?</h3>
+              <h2 class="text-uppercase white fz-50- text-center"> Почему выгодно покупать у нас?</h2>
               <div class="mb-4"></div>
             </div>
             <div class="col-6 col-sm-4 col-lg-4">
