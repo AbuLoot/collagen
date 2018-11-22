@@ -69,8 +69,8 @@
                 <h3 class="heading primary-color header-price fz-60 "> 9500〒</h3>
               </div>
               <div class="col-sm-5">
-                <img src="images/collagen/banka1.png" class="banka1">
-                <img src="images/collagen/banka2.png" class="banka2">
+                <!-- <img src="images/collagen/banka1.png" class="banka1"> -->
+                <img src="images/collagen/banka2.png" class="banka2- float-sm-right">
               </div>
             </div>
           </div>
@@ -92,6 +92,18 @@
 
       <?php unset($_SESSION['notifications']); ?>
 
+      <!-- CONTACT BUTTONS -->
+      <div class="fixed-button">
+        <a href="whatsapp://send?phone=+77759557171" target="_top" data-attr="whatsapp_call">
+          <img src="images/whatsapp-logo.png">
+        </a>
+      </div>
+      <div class="fixed-button2">
+        <a href="tel:+77759557171" target="_top" data-attr="phone">
+          <img src="images/phone-receiver.png">
+        </a>
+      </div>
+
       <!-- OUR PRODUCTS -->
       <section class="section pt-8 pb-8">
         <div class="container-fluid">
@@ -108,13 +120,9 @@
                   <a href="#">
                     <img class="img-responsive" src="images/collagen/banka1.png" alt="" />
                   </a>
-                  <div class="actions">
-                    <div class="action action-view-detail">
-
-                    </div>
-                    <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
-                    </div>
+                  <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
+                  <div class="text-center">
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -131,13 +139,9 @@
                   <a href="#">
                     <img class="img-responsive" src="images/collagen/banka2.png" alt="" />
                   </a>
-                  <div class="actions">
-                    <div class="action action-view-detail">
-
-                    </div>
-                    <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
-                    </div>
+                  <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
+                  <div class="text-center">
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -154,13 +158,9 @@
                   <a href="#">
                     <img class="img-responsive" src="images/collagen/banka1.png" alt="" />
                   </a>
-                  <div class="actions">
-                    <div class="action action-view-detail">
-
-                    </div>
-                    <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
-                    </div>
+                  <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
+                  <div class="text-center">
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -177,13 +177,9 @@
                   <a href="#">
                     <img class="img-responsive" src="images/collagen/banka2.png" alt="" />
                   </a>
-                  <div class="actions">
-                    <div class="action action-view-detail">
-
-                    </div>
-                    <div class="action action-add-to-cart">
-                      <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a>
-                    </div>
+                  <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
+                  <div class="text-center">
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -231,7 +227,7 @@
                   <img src="images/standarts/haccp2.png" class="img-responsive">
                 </li> -->
                 <li class="nav-item mb-2">
-                  <img src="images/standarts/kap3.png" class="img-responsive">
+                  <img src="images/standarts/kap2.png" class="img-responsive">
                 </li>
                 <li class="nav-item mb-2">
                   <img src="images/standarts/gmo2.png" class="img-responsive">
@@ -251,7 +247,7 @@
       <!-- WHY YOU DO YOU NEED COLLAGEN? -->
       <section class="section pt-8 pb-8 bg-black">
         <div class="container">
-          <h2 class="text-uppercase- text-center mb-5 fz-60 primary-color">Чем полезен коллаген?</h2>
+          <h2 class="text-uppercase fz-50- text-center mb-5 primary-color">Чем полезен коллаген?</h2>
           <div class="row">
             <div class="col-sm-6 col-lg-4">
               <div class="box-icon style-1 text-center">
@@ -353,7 +349,7 @@
         <div class="container">
           <div class="row pt-8 pb-8">
             <div class="col-sm-12 col-lg-8">
-              <h3 class="text-uppercase- fz-58 primary-color"> Для кого нужен коллаген?</h3>
+              <h2 class="text-uppercase fz-50- primary-color"> Для кого нужен коллаген?</h2>
               <ul class="list-who-needs">
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Говяжий коллаген предназначен в первую очередь для регулировки режима питания <span class="primary-color">спортсменов</span> при сильных нагрузках на связки и суставы, при которых наблюдается ускорение процессов обмена веществ</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Способствует естественному сбросу лишнего веса при дозеровке от 25 гр. с небольшой физ. нагрузкой</li>
@@ -386,7 +382,7 @@
               </div>
             </div>
             <div class="col-sm-12 col-lg-6">
-              <h2 class="fz-52 primary-color">Преимущества нашего продукта</h2>
+              <h2 class="text-uppercase fz-50- primary-color">Преимущество нашего продукта</h2>
               <ul class="list-benefist">
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> 100% натуральный, без ГМО</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Витамины A, B12, D, C</li>
@@ -443,7 +439,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-8 offset-sm-2">
-                <h3 class="text-uppercase- text-center heading mb-5 white primary-color">Отзывы</h3>
+                <h3 class="text-uppercase text-center fz-50- mb-5 white primary-color">Отзывы</h3>
               </div>
               <div class="col-sm-12">
                 <div class="testimonials-slider" data-auto-play="true" data-desktop="1" data-laptop="1" data-tablet="1" data-mobile="1">
@@ -490,7 +486,7 @@
           <div class="row">
             <div class="col-sm-12 col-lg-12">
               <div class="mt-3"></div>
-              <h3 class="heading white fz-50 fw-normal text-center"> Почему выгодно покупать у нас?</h3>
+              <h3 class="text-uppercase white fz-50- text-center"> Почему выгодно покупать у нас?</h3>
               <div class="mb-4"></div>
             </div>
             <div class="col-6 col-sm-4 col-lg-4">
@@ -550,8 +546,26 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-              <h3 class="heading fw-normal fz-40 mb-8"> Часто задаваемые вопросы</h3>
+              <h3 class="text-uppercase heading fw-normal fz-40 mb-8"> Часто задаваемые вопросы</h3>
               <div id="accordion" class="accordion">
+                <div class="accordion-section">
+                  <div class="accordion-header" id="headingZero">
+                    <h6 class="accordion-title">
+                      <div data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">Какие есть вкусы?</div>
+                      <span class="accordion-icon"></span>
+                    </h6>
+                  </div>
+                  <div id="collapseZero" class="collapse show" aria-labelledby="headingZero" data-parent="#accordion">
+                    <div class="accordion-content">
+                      <ul>
+                        <li>Ванильный</li>
+                        <li>Шоколадный</li>
+                        <li>Банановый</li>
+                        <li>Клубничный</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
                 <div class="accordion-section">
                   <div class="accordion-header" id="headingOne">
                     <h6 class="accordion-title">
@@ -559,7 +573,7 @@
                       <span class="accordion-icon"></span>
                     </h6>
                   </div>
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="accordion-content">Продолжительность курса составляет не менее 3 месяцев.
                     Кожа. Ногти. Волосы. Ожоги. Восстановление после операций. Продолжительность курса должна быть такова, чтобы клетки этих тканей успели смениться новыми.
                     Хрящевая ткань одна из самых медленно возобновляемых. Это объясняется тем, что хрящи не имеют прямого капиллярного питания из кровотока. Хрящи получают питательные вещества только посредством осмоса и диффузии при омовения его синовиальной жидкостью. Омовения происходит при движении сустава, поэтому для нормальной регенерации хрящей и восстановление всего сустава обязательно нужна умеренная физическая активность.
@@ -644,7 +658,7 @@
                     <div class="col-md-12">
                       <input type="tel" name="phone" placeholder="Введите номер телефона*" minlength="5" maxlength="20" value="" required>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                       <button type="submit" class="btn-app mt-3">Отправить</button>
                     </div>
                   </div>
@@ -678,21 +692,45 @@
     <footer class="footer bg-black">
       <div class="footer-inner">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-4 col-lg-7 col-md-6">
-              <div class="branding__logo">
-                <a href="./">
-                  <img src="images/collagen/logo.png" alt="Biotic" class="main-logo" />
-                </a>
+          <div class="row  pb-6">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h2 class="text-uppercase white">Свяжитесь с нами</h2>
+                <div class="mb-2"></div>
+                <div class="branding__logo">
+                  <a href="./">
+                    <img src="images/collagen/logo.png" alt="Biotic" class="main-logo" />
+                  </a>
+                </div>
+                <div class="mb-2"></div>
               </div>
-              <div class="mb-4"></div>
-              <p>Адрес: Республика Казахстан, город Алматы, улица Толе би 286/2, офис 401.</p>
-              <div class="mb-2"></div>
             </div>
-            <div class="col-sm-4 col-lg-7 col-md-6">
-              <div class="phones">
-                <a href="tel:+77759557171" target="_top" data-attr="phone"><i class="fa fa-phone"></i> 8 (775) 955 71 71</a>
-                <a href="whatsapp://send?phone=+77759557171" target="_top" data-attr="whatsapp_call"><i class="fa fa-whatsapp"></i> 8 (775) 955 71 71</a>
+            <div class="col-sm-4">
+              <div class="text-center-xs">
+                <h4 class="white mt-3"> Адрес</h4>
+                <div class="mb-3"></div>
+                <p class="fz-22">Республика Казахстан, город Алматы, улица Толе би 286/2, офис 401.</p>
+                <p class="heading fz-22 fw-normal"> <a class="primary-color" href="mailto:info@biotic.com">info@biotic.kz</a></p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="text-center-xs">
+                <h4 class="white mt-3"> Реквизиты</h4>
+                <div class="mb-3"></div>
+                <p class="fz-22">Компания &laquo;Biotic&raquo;</p>
+                <p>БИН: 880 820 301 961</p>
+                <p>ИИК: KZ1992618026D1071000</p>
+                <p>АО «Казкоммерцбанк» БИК: KZKOKZKX</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="text-center-xs">
+                <h4 class="white mt-3"> Номера телефонов</h4>
+                <div class="mb-3"></div>
+                <div class="phones mx-auto">
+                  <a href="tel:+77759557171" target="_top" data-attr="phone"><i class="fa fa-phone"></i> 8 (775) 955 71 71</a>
+                  <a href="whatsapp://send?phone=+77759557171" target="_top" data-attr="whatsapp_call"><i class="fa fa-whatsapp"></i> 8 (775) 955 71 71</a>
+                </div>
               </div>
             </div>
           </div>
@@ -706,7 +744,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <p class="mb-0"> Сайт зарезервирован компанией Biotic</p>
+              <p class="mb-0"> Сайт зарезервирован компанией &laquo;Biotic&raquo;</p>
             </div>
             <div class="col-sm-6">
               <div class="text-right text-center-sm">
