@@ -122,7 +122,7 @@
                   </a>
                   <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
                   <div class="text-center">
-                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -141,7 +141,7 @@
                   </a>
                   <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
                   <div class="text-center">
-                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -160,7 +160,7 @@
                   </a>
                   <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
                   <div class="text-center">
-                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать</button>
                   </div>
                 </div>
                 <div class="product-info">
@@ -179,7 +179,7 @@
                   </a>
                   <!-- <div class="actions"> <div class="action action-view-detail"> </div> <div class="action action-add-to-cart"> <a href="#" class="button-add-to-cart" data-toggle="modal" data-target="#appModal">Заказать</a> </div> </div> -->
                   <div class="text-center">
-                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказть</button>
+                    <button type="button" class="btn-app mt-2" data-toggle="modal" data-target="#appModal">Заказать</button>
                   </div>
                 </div>
                 <div class="product-info">
