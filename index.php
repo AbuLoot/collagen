@@ -63,7 +63,7 @@
                 <h3 class="heading primary-color text-uppercase header-title"> 100% Говяжий Протеин</h3>
                 <div class="row">
                   <div class="col-sm-10">
-                    <p class="primary-color- white fz-28 lh-28 ls-1">Протеин полученный из натурального говяжьего белка, для набора мыщечной массы, для укрепления суставов и связок.</p>
+                    <p class="primary-color- white fz-28 lh-28 ls-1">Протеин полученный из натурального говяжьего белка, для набора мышечной массы, для укрепления суставов и связок.</p>
                   </div>
                 </div>
                 <h3 class="heading primary-color header-price fz-60 "> 9500〒</h3>
@@ -386,7 +386,7 @@
               <ul class="list-benefist">
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> 100% натуральный, без ГМО</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Витамины A, B12, D, C</li>
-                <li><span class="primary-color"><i class="fa fa-check"></i></span> Полный состав Аминокислот</li>
+                <li><span class="primary-color"><i class="fa fa-check"></i></span> Полный состав аминокислот</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Высокая скорость усвоения</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Усвояемость продукта на 98%</li>
                 <li><span class="primary-color"><i class="fa fa-check"></i></span> Отсутствие аллергенов</li>
